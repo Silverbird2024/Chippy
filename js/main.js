@@ -44,69 +44,45 @@ $scope.Pager1_nextclick = function() {$scope.GotoNextPage();};
 NeoApp.controller("Pricelist_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 2;
 $App.NAB.PageID = "Pricelist";
-$scope.PushButton12_click = function() {$App.q003 = $scope.Calculate($App.q003+"-1",-1);
-if ($App.q003 < 1) {
-$App.q003 = 0;
-} else {
-};
-$App.sub3 = $scope.Calculate($App.Price003+"*"+$App.q003,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton13_click = function() {$App.q003 = $scope.Calculate($App.q003+"+1",-1);
-$App.sub3 = $scope.Calculate($App.Price003+"*"+$App.q003,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
 $scope.PushButton4_click = function() {$scope.GotoPage( "Home" );};
 $scope.Pager2_prevclick = function() {$scope.GotoPrevPage();};
 $scope.Pager2_nextclick = function() {$scope.GotoNextPage();};
-$scope.PushButton7_click = function() {$App.q001 = $scope.Calculate($App.q001+"-1",-1);
-if ($App.q001 < 1) {
-$App.q001 = 0;
-} else {
-};
+$scope.Plus01_click = function() {$scope.SetObjectStyle("Plus01","background-color","lime");
+$App.q001 = $scope.Calculate($App.q001+"+1",-1);
 $App.sub1 = $scope.Calculate($App.Price001+"*"+$App.q001,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton9_click = function() {$App.q001 = $scope.Calculate($App.q001+"+1",-1);
-$App.sub1 = $scope.Calculate($App.Price001+"*"+$App.q001,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton10_click = function() {$App.q002 = $scope.Calculate($App.q002+"+1",-1);
+$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6+"+"+$App.sub7+"+"+$App.sub8+"+"+$App.sub9+"+"+$App.sub10+"+"+$App.sub11+"+"+$App.sub12+"+"+$App.sub13+"+"+$App.sub14+"+"+$App.sub15+"+"+$App.sub16+"+"+$App.sub17+"+"+$App.sub18+"+"+$App.sub19+"+"+$App.sub20+"+"+$App.sub21+"+"+$App.sub22+"+"+$App.sub23+"+"+$App.sub24,-1);};
+$scope.Plus02_click = function() {$scope.SetObjectStyle("Plus02","background-color","lime");
+$App.q002 = $scope.Calculate($App.q002+"+1",-1);
 $App.sub2 = $scope.Calculate($App.Price002+"*"+$App.q002,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton11_click = function() {$App.q002 = $scope.Calculate($App.q002+"-1",-1);
-if ($App.q002 < 1) {
-$App.q002 = 0;
-} else {
-};
-$App.sub2 = $scope.Calculate($App.Price002+"*"+$App.q002,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton14_click = function() {$App.q004 = $scope.Calculate($App.q004+"-1",-1);
-if ($App.q004 < 1) {
-$App.q004 = 0;
-} else {
-};
-$App.sub4 = $scope.Calculate($App.Price004+"*"+$App.q004,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton15_click = function() {$App.q004 = $scope.Calculate($App.q004+"+1",-1);
-$App.sub4 = $scope.Calculate($App.Price004+"*"+$App.q004,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton16_click = function() {$App.q006 = $scope.Calculate($App.q006+"-1",-1);
-if ($App.q006 < 1) {
-$App.q006 = 0;
-} else {
-};
-$App.sub6 = $scope.Calculate($App.Price006+"*"+$App.q006,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton17_click = function() {$App.q006 = $scope.Calculate($App.q006+"+1",-1);
-$App.sub6 = $scope.Calculate($App.Price006+"*"+$App.q006,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton18_click = function() {$App.q005 = $scope.Calculate($App.q005+"-1",-1);
-if ($App.q005 < 1) {
-$App.q005 = 0;
-} else {
-};
-$App.sub5 = $scope.Calculate($App.Price005+"*"+$App.q005,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
-$scope.PushButton19_click = function() {$App.q005 = $scope.Calculate($App.q005+"+1",-1);
-$App.sub5 = $scope.Calculate($App.Price005+"*"+$App.q005,-1);
-$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6,-1);};
+$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6+"+"+$App.sub7+"+"+$App.sub8+"+"+$App.sub9+"+"+$App.sub10+"+"+$App.sub11+"+"+$App.sub12+"+"+$App.sub13+"+"+$App.sub14+"+"+$App.sub15+"+"+$App.sub16+"+"+$App.sub17+"+"+$App.sub18+"+"+$App.sub19+"+"+$App.sub20+"+"+$App.sub21+"+"+$App.sub22+"+"+$App.sub23+"+"+$App.sub24,-1);};
+$scope.PushButton9_click = function() {$scope.SetObjectStyle("Plus01","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus02","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus03","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus04","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus05","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus06","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus07","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus08","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus09","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus10","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus11","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus12","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus13","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus14","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus15","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus16","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus17","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus18","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus19","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus20","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus21","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus22","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus23","background-color","#E0E0E0");
+$scope.SetObjectStyle("Plus24","background-color","#E0E0E0");};
+$scope.Plus03_click = function() {$scope.SetObjectStyle("Plus03","background-color","lime");
+$App.q003 = $scope.Calculate($App.q003+"+1",-1);
+$App.sub3 = $scope.Calculate($App.Price003+"*"+$App.q003,-1);
+$App.total = $scope.Calculate($App.sub1+"+"+$App.sub2+"+"+$App.sub3+"+"+$App.sub4+"+"+$App.sub5+"+"+$App.sub6+"+"+$App.sub7+"+"+$App.sub8+"+"+$App.sub9+"+"+$App.sub10+"+"+$App.sub11+"+"+$App.sub12+"+"+$App.sub13+"+"+$App.sub14+"+"+$App.sub15+"+"+$App.sub16+"+"+$App.sub17+"+"+$App.sub18+"+"+$App.sub19+"+"+$App.sub20+"+"+$App.sub21+"+"+$App.sub22+"+"+$App.sub23+"+"+$App.sub24,-1);};
 });
 NeoApp.controller("PricePge01Set_Ctrl", function($scope,$rootScope,$route,$timeout,$filter,$window,$animate) {
 $App.NAB.PageNumber = 3;
